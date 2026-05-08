@@ -25,10 +25,14 @@ export function matchItemsFromMessage(
     .map((p) => p.trim())
     .filter(Boolean);
 
+  console.log("Message:", message);
+  console.log("Parts:", parts);
+
   const matched: FoodItem[] = [];
   const matchedIds = new Set<string>();
 
   for (const part of parts) {
+    console.log("Checking part:", part);
     for (const food of allFoods) {
       if (matchedIds.has(food.id)) continue;
       if (food.isSaladBar) continue;
@@ -40,6 +44,7 @@ export function matchItemsFromMessage(
       );
 
       if (isMatch) {
+        console.log("Matched:", food.name);
         matched.push(food);
         matchedIds.add(food.id);
         break;
@@ -47,6 +52,7 @@ export function matchItemsFromMessage(
     }
   }
 
+  console.log("Total matched:", matched.length);
   return matched;
 }
 
