@@ -14,18 +14,18 @@ export function matchItemsFromMessage(
   message: string,
   allFoods: FoodItem[]
 ): FoodItem[] {
-  const normalized = message
-    .toLowerCase()
-    .trim()
-    .replace(/[.,!?]/g, "")
-    .replace(/\s+/g, " ");
-
-  const parts = normalized
-    .split(/[,\n]/)
-    .map((p) => p.trim())
+  // split FIRST before removing punctuation
+  const parts = message
+    .split(/[,،\n]/)           // ← split on comma first
+    .map((p) => p
+      .toLowerCase()
+      .trim()
+      .replace(/[.!?]/g, "")  // ← remove punctuation but NOT comma
+      .replace(/\s+/g, " ")
+      .trim()
+    )
     .filter(Boolean);
 
-  console.log("Message:", message);
   console.log("Parts:", parts);
 
   const matched: FoodItem[] = [];
