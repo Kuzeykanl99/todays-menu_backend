@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model FoodItem {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  calories    Int
+  category    Category
+  keywords    String[]
+  isSaladBar  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  @@map("food_items")
+}
+
+model DailyMenu {
+  id          String    @id @default(uuid())
+  date        DateTime  @unique @db.Date
+  foodItemIds String[]
+  rawMessage  String?
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@map("daily_menus")
+}
+
+model DeviceToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  createdAt DateTime @default(now())
+
+  @@map("device_tokens")
+}
+
+enum Category {
+  starter
+  main
+  dessert
+  drink
+}
