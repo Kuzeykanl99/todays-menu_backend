@@ -52,6 +52,9 @@ export function startBot() {
     try {
       await bot.sendMessage(chatId, "⏳ Menü işleniyor...");
 
+      console.log("Raw message bytes:", JSON.stringify(text));
+      console.log("Raw message:", text);
+
       const allFoods = await db.foodItem.findMany({
         where: { isActive: true },
       });
