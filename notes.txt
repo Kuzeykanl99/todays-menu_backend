@@ -1,0 +1,3 @@
+eas update --branch production --message "describe what changed"
+
+when update happens run command above

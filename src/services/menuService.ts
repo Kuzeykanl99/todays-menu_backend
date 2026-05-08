@@ -77,7 +77,7 @@ export async function getTodaysMenu() {
 
   return {
     date: menu.date.toISOString(),
-    restaurantName: "Lezzet Mutfağı",
+    restaurantName: "Özdisan",
     categories,
   };
 }
