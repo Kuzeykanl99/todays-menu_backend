@@ -3,10 +3,10 @@ import { db } from "../lib/db";
 const CATEGORY_ORDER = ["starter", "main", "dessert", "drink"];
 
 const CATEGORY_LABELS: Record<string, { title: string; emoji: string }> = {
-  starter: { title: "Starter", emoji: "🥗" },
-  main: { title: "Main Course", emoji: "🍽️" },
-  dessert: { title: "Dessert", emoji: "🍮" },
-  drink: { title: "Drinks", emoji: "🥤" },
+  starter: { title: "Başlangıçlar", emoji: "🥗" },
+  main: { title: "Ana Yemekler", emoji: "🍽️" },
+  dessert: { title: "Tatlılar", emoji: "🍮" },
+  drink: { title: "İçecekler", emoji: "🥤" },
 };
 
 type FoodItem = {
