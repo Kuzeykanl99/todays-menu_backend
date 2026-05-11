@@ -14,29 +14,25 @@ export function matchItemsFromMessage(
   message: string,
   allFoods: FoodItem[]
 ): FoodItem[] {
-  // split FIRST before removing punctuation
   const parts = message
-    .split(/[,،\n]/)           // ← split on comma first
-    .map((p) => p
-      .toLowerCase()
-      .trim()
-      .replace(/[.!?]/g, "")  // ← remove punctuation but NOT comma
-      .replace(/\s+/g, " ")
-      .trim()
-    )
+    .split(/[,،\n]/)
+    .map((p) => p.toLowerCase().trim().replace(/[.!?]/g, "").replace(/\s+/g, " ").trim())
     .filter(Boolean);
-
-  console.log("Parts:", parts);
 
   const matched: FoodItem[] = [];
   const matchedIds = new Set<string>();
 
   for (const part of parts) {
-    console.log("Checking part:", part);
-    for (const food of allFoods) {
-      if (matchedIds.has(food.id)) continue;
-      if (food.isSaladBar) continue;
+    // ← sort by longest keyword first — prevents partial matches winning
+    const sortedFoods = [...allFoods]
+      .filter(f => !f.isSaladBar && !matchedIds.has(f.id))
+      .sort((a, b) => {
+        const aMax = Math.max(...a.keywords.map(k => k.length));
+        const bMax = Math.max(...b.keywords.map(k => k.length));
+        return bMax - aMax; // longest keyword first
+      });
 
+    for (const food of sortedFoods) {
       const isMatch = food.keywords.some(
         (keyword) =>
           part.includes(keyword.toLowerCase()) ||
@@ -44,7 +40,6 @@ export function matchItemsFromMessage(
       );
 
       if (isMatch) {
-        console.log("Matched:", food.name);
         matched.push(food);
         matchedIds.add(food.id);
         break;
@@ -52,7 +47,6 @@ export function matchItemsFromMessage(
     }
   }
 
-  console.log("Total matched:", matched.length);
   return matched;
 }
 
