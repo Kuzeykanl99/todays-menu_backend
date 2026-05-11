@@ -8,6 +8,18 @@ const MONTHLY_MENU = [
   { date: "2024-05-01", items: "tavuk, pilav, mercimek, baklava" },
   { date: "2024-05-02", items: "balık, bezelye, ezogelin, sütlaç" },
   { date: "2024-05-03", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-04", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-05", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-06", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-07", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-08", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-09", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-10", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-11", items: "ezogelin, çoban, pilav, baklava, ayran" },
+  { date: "2024-05-12", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-13", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-14", items: "köfte, makarna, mercimek, kazandibi" },
+  { date: "2024-05-15", items: "köfte, makarna, mercimek, kazandibi" },
   // add all days here
 ];
 
