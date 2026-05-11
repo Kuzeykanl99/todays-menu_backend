@@ -7,6 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model MonthlyMenu {
+  id          String   @id @default(uuid())
+  date        DateTime @unique @db.Date
+  foodItemIds String[]
+  createdAt   DateTime @default(now())
+
+  @@map("monthly_menus")
+}
+
 model FoodItem {
   id          String   @id @default(uuid())
   name        String

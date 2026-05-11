@@ -3,6 +3,7 @@ import { db } from "../lib/db";
 import { matchItemsFromMessage, getUnmatchedParts } from "./menuMatcher";
 import { publishMenu } from "./menuService";
 import { notifyAllUsers } from "./notificationService";
+import { publishFromMonthlyMenu } from "./scheduler";
 
 export function startBot() {
   const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN!, {
@@ -21,6 +22,16 @@ export function startBot() {
 
     const text = msg.text?.trim();
     if (!text) return;
+
+    if (text === "/publish") {
+      const published = await publishFromMonthlyMenu();
+      if (published) {
+        bot.sendMessage(chatId, "✅ Aylık menüden bugünün menüsü yayınlandı.");
+      } else {
+        bot.sendMessage(chatId, "⚠️ Bugün için aylık menüde kayıt bulunamadı veya menü zaten yayınlandı.");
+      }
+      return;
+    }
 
     if (text === "/start" || text === "/menu") {
       bot.sendMessage(
