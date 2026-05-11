@@ -11,7 +11,7 @@ const MONTHLY_MENU = [
   { date: "2026-05-06", items: "karışık ızgara, anadolu, peynirli makarna, mevsim meyve" },
   { date: "2026-05-07", items: "mercimek, mantı, şakşuka, yoğurt, kadayıf" },
   { date: "2026-05-08", items: "köz domates, susamlı tavuk, tepsi börek, ayran" },
-  { date: "2026-05-11", items: "şehriyeli bulgur, yoğurt çorbası, haşlama, mevsim salata" },
+  { date: "2026-05-11", items: "bulgur, yoğurt çorbası, haşlama, mevsim salata" },
   { date: "2026-05-12", items: "mercimek, dolma, su böreği, yoğurt, baklava" },
   { date: "2026-05-13", items: "soslu makarna, ezogelin, inegöl, mevsim meyve" },
   { date: "2026-05-14", items: "tel şehriyeli pilav, köylü, karnıyarık, cacık" },
