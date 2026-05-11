@@ -82,7 +82,7 @@ async function seed() {
         description: "Ev yapımı tavuk suyu ve ince şehriye ile hazırlanmış, şifalı geleneksel çorba",
         calories: 132,
         category: "main",
-        keywords: ["tavuksuyu", "şehriyeli", "şehriyeli tavuksuyu", "tavuk suyu çorbası"],
+        keywords: ["tavuksuyu", "şehriyeli tavuksuyu", "tavuk suyu çorbası"],
         isSaladBar: false,
       },
       {

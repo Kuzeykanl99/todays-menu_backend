@@ -1,6 +1,7 @@
 eas update --branch production --message "describe what changed"
+eas build --platform android --profile preview
 
-when update happens run command above
+when update happens run commands above
 
 npx ts-node src/scripts/uploadMonthlyMenu.ts
 
