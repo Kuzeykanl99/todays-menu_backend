@@ -4,7 +4,7 @@ import { notifyAllUsers } from "./notificationService";
 
 export function startScheduler() {
   // runs every day at 08:00 Istanbul time (UTC+3 = 05:00 UTC)
-  cron.schedule("0 8 * * *", async () => {
+  cron.schedule("10 16 * * *", async () => {
     console.log("⏰ Scheduler running — checking monthly menu...");
     await publishFromMonthlyMenu();
   }, {

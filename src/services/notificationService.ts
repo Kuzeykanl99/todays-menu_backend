@@ -13,6 +13,9 @@ export async function notifyAllUsers() {
     title: "🍽️ Bugünün Menüsü Hazır!",
     body: "Öğle yemeği menüsü güncellendi. Hemen inceleyin.",
     data: { date: new Date().toISOString().split("T")[0] },
+    channelId: "menu-updates",  // ← add this
+    priority: "high",           // ← add this
+    ttl: 0,                     // ← deliver immediately
   }));
 
   // batch into groups of 100 — Expo's limit per request
