@@ -21,11 +21,13 @@ export async function notifyAllUsers() {
   // batch into groups of 100 — Expo's limit per request
   for (let i = 0; i < messages.length; i += 100) {
     const batch = messages.slice(i, i + 100);
-    await fetch("https://exp.host/--/api/v2/push/send", {
+    const response = await fetch("https://exp.host/--/api/v2/push/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(batch),
     });
+    const result = await response.json();
+    console.log("Push result:", JSON.stringify(result));
   }
 
   console.log(`✅ Notifications sent to ${tokens.length} devices`);
