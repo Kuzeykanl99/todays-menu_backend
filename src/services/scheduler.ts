@@ -17,16 +17,6 @@ export function startScheduler() {
 export async function publishFromMonthlyMenu() {
   const today = new Date(new Date().toISOString().split("T")[0]);
 
-  // check if today already has a published menu
-  const existing = await db.dailyMenu.findUnique({
-    where: { date: today }
-  });
-
-  if (existing) {
-    console.log("Menu already published for today — skipping");
-    return false;
-  }
-
   // find today in the monthly plan
   const monthlyEntry = await db.monthlyMenu.findUnique({
     where: { date: today }
@@ -38,8 +28,14 @@ export async function publishFromMonthlyMenu() {
   }
 
   // publish it as today's menu
-  await db.dailyMenu.create({
-    data: {
+  await db.dailyMenu.upsert({
+    where: { date: today },
+    update: {
+      foodItemIds: monthlyEntry.foodItemIds,
+      rawMessage: "auto-published from monthly menu",
+      publishedAt: new Date(),
+    },
+    create: {
       date: today,
       foodItemIds: monthlyEntry.foodItemIds,
       rawMessage: "auto-published from monthly menu",
