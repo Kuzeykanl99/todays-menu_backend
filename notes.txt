@@ -8,5 +8,6 @@ npx ts-node src/scripts/uploadMonthlyMenu.ts
 when monthly menu is loaded
 
 npx ts-node src/scripts/seedFoods.ts
+npx ts-node src/scripts/uploadMonthlyMenu.ts
 
 seed Foods with description
