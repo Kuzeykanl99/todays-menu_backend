@@ -8,16 +8,30 @@ eas build --platform android --profile preview
 
 when update happens run commands above
 
+
+
 npx ts-node src/scripts/uploadMonthlyMenu.ts
+add commit push
 
 when monthly menu is loaded
+
+
 
 npx ts-node src/scripts/seedFoods.ts
 npx ts-node src/scripts/uploadMonthlyMenu.ts
 
 seed Foods with description
 
+
+
 eas build --platform ios
 eas submit --platform ios
 
 ios app change
+
+
+Websites
+
+https://expo.dev/accounts/kuzeykanl/projects/TodaysMenu/builds
+https://supabase.com/dashboard/project/qnqorcyyfwkaqllwermj/editor/17593?schema=public
+https://railway.com/project/89df4301-8148-4112-b233-51702145ad2c?environmentId=faf413d7-e3c1-46ad-8927-9719ebe136d1
