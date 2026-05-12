@@ -1,5 +1,10 @@
-eas update --branch production --message "describe what changed"
+# JavaScript changes only (UI, logic, API URL etc.)
+eas update --branch production --message "what changed"
+# users get update automatically next time they open app
+
+# Native changes (icon, permissions, new packages)
 eas build --platform android --profile preview
+# download and redistribute the new APK
 
 when update happens run commands above
 
@@ -11,3 +16,8 @@ npx ts-node src/scripts/seedFoods.ts
 npx ts-node src/scripts/uploadMonthlyMenu.ts
 
 seed Foods with description
+
+eas build --platform ios
+eas submit --platform ios
+
+ios app change
