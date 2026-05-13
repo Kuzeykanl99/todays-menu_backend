@@ -472,14 +472,6 @@ async function seed() {
         isSaladBar: false,
       },
       {
-        name: "Karışık Komposto",
-        description: "Mevsim meyvelerinden hazırlanmış, şekerli geleneksel Türk kompostosu",
-        calories: 106,
-        category: "drink",
-        keywords: ["komposto", "karışık komposto"],
-        isSaladBar: false,
-      },
-      {
         name: "Hamidiye Su",
         description: "Hamidiye doğal kaynak suyu (80 ml)",
         calories: 0,
