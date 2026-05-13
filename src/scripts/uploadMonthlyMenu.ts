@@ -15,7 +15,7 @@ const MONTHLY_MENU = [
   { date: "2026-05-12", items: "mercimek, dolma, su böreği, baklava" },
   { date: "2026-05-13", items: "soslu makarna, ezogelin, inegöl, mevsim meyve" },
   { date: "2026-05-14", items: "tel şehriyeli pilav, köylü, karnıyarık, cacık" },
-  { date: "2026-05-15", items: "arpa şehriye çorba, çökertme, pilav, komposto" },
+  { date: "2026-05-15", items: "arpa şehriye çorba, çökertme, pirinç pilavı, komposto" },
   { date: "2026-05-18", items: "tel şehriyeli pilav, ezogelin, filiz kebap, sütlaç" },
   { date: "2026-05-19", items: "milföy, mercimek, ıspanak, meşrubat" },
   { date: "2026-05-20", items: "çıtır tavuk, soslu makarna, tarhana, ayran" },

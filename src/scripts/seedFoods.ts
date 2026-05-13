@@ -98,7 +98,7 @@ async function seed() {
         description: "Arpa şehriyesi ve sebzelerle hazırlanmış, hafif ve doyurucu çorba",
         calories: 80,
         category: "main",
-        keywords: ["arpa", "arpa şehriye", "arpa şehriye çorba"],
+        keywords: ["arpa şehriye", "arpa şehriye çorba"],
         isSaladBar: false,
       },
       {
@@ -236,7 +236,7 @@ async function seed() {
         description: "Domates sosunda pişirilmiş, yumuşacık ev yapımı köfte (3 adet)",
         calories: 300,
         category: "main",
-        keywords: ["soslu köfte", "köfte"],
+        keywords: ["soslu köfte"],
         isSaladBar: false,
       },
       {
@@ -278,7 +278,7 @@ async function seed() {
         description: "Tereyağlı buharda pişirilmiş Türk pilavı",
         calories: 389,
         category: "main",
-        keywords: ["pilav", "pirinç pilavı", "pirinç"],
+        keywords: ["pirinç pilavı", "pirinç"],
         isSaladBar: false,
       },
       {
@@ -294,7 +294,7 @@ async function seed() {
         description: "İnce tel şehriyesiyle hazırlanmış, altın rengi kavurmalı pirinç pilavı",
         calories: 422,
         category: "main",
-        keywords: ["tel şehriyeli pilav", "şehriyeli pilav", "tel pilav"],
+        keywords: ["tel şehriyeli pilav", "tel pilav"],
         isSaladBar: false,
       },
       {
@@ -302,7 +302,7 @@ async function seed() {
         description: "Şehriye ile birlikte pişirilmiş, hafif ve besleyici bulgur pilavı",
         calories: 274,
         category: "main",
-        keywords: ["bulgur", "bulgur pilavı", "şehriyeli bulgur"],
+        keywords: ["bulgur", "şehriyeli bulgur"],
         isSaladBar: false,
       },
       {
@@ -318,7 +318,7 @@ async function seed() {
         description: "Kremsi peynir sosuyla hazırlanmış, doyurucu fırın makarna",
         calories: 332,
         category: "main",
-        keywords: ["peynirli makarna", "makarna"],
+        keywords: ["peynirli makarna"],
         isSaladBar: false,
       },
       {
@@ -326,7 +326,7 @@ async function seed() {
         description: "Domates bazlı özel sosla hazırlanmış, geleneksel Türk usulü makarna",
         calories: 241,
         category: "main",
-        keywords: ["soslu makarna", "makarna"],
+        keywords: ["soslu makarna"],
         isSaladBar: false,
       },
 
@@ -336,7 +336,7 @@ async function seed() {
         description: "Beyaz peynir harçlı, fırında altın rengi pişirilmiş çıtır tepsi böreği",
         calories: 300,
         category: "main",
-        keywords: ["tepsi börek", "peynirli börek", "börek"],
+        keywords: ["tepsi börek", "peynirli börek"],
         isSaladBar: false,
       },
       {
@@ -344,7 +344,7 @@ async function seed() {
         description: "Haşlanmış yufkalarla hazırlanmış, peynirli geleneksel Türk su böreği",
         calories: 300,
         category: "main",
-        keywords: ["su böreği", "börek"],
+        keywords: ["su böreği"],
         isSaladBar: false,
       },
       {
@@ -362,7 +362,7 @@ async function seed() {
         description: "Ceviz dolgulu, şerbetli geleneksel Türk tatlısı kadayıf",
         calories: 300,
         category: "dessert",
-        keywords: ["kadayıf", "cevizli kadayıf"],
+        keywords: ["cevizli kadayıf"],
         isSaladBar: false,
       },
       {
@@ -424,14 +424,6 @@ async function seed() {
         isSaladBar: false,
       },
       {
-        name: "Yoğurt",
-        description: "Taze günlük yoğurt (100 gr)",
-        calories: 62,
-        category: "starter",
-        keywords: ["yoğurt"],
-        isSaladBar: false,
-      },
-      {
         name: "Mevsim Salata",
         description: "Taze mevsim yeşillikleri, domates ve salatalıktan oluşan günlük salata",
         calories: 100,
@@ -460,7 +452,7 @@ async function seed() {
         description: "Soğuk içecek seçenekleri",
         calories: 100,
         category: "drink",
-        keywords: ["meşrubat", "içecek"],
+        keywords: ["meşrubat"],
         isSaladBar: false,
       },
       {
@@ -484,7 +476,7 @@ async function seed() {
         description: "Eker günlük taze yoğurt (150 gr)",
         calories: 93,
         category: "starter",
-        keywords: ["yoğurt", "eker yoğurt", "eker"],
+        keywords: ["eker yoğurt", "eker"],
         isSaladBar: true,
       },
       {
@@ -492,7 +484,7 @@ async function seed() {
         description: "Çay ve kahve standı — sınırsız ikram",
         calories: 5,
         category: "drink",
-        keywords: ["çay", "kahve", "çay kahve", "içecek"],
+        keywords: ["çay", "kahve", "çay kahve"],
         isSaladBar: true,
       },
       {
